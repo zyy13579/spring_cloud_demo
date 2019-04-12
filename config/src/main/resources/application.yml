@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      label: master
+      server:
+        git:
+          url: git@github.com:zyy13579/spring_cloud_demo.git
+          search-paths: spring_cloud_demo/config_file
+server:
+  port: 8888
