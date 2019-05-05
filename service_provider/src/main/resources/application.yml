@@ -5,6 +5,21 @@ eureka:
 spring:
   application:
     name: service-provider
+  cloud:
+    config:
+      label: master
+      profile: dev
+#      uri: http://localhost:8888/
+      discovery:
+        enabled: true
+        service-id: config-server
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: ["health","info","refresh"]
+#        include: "*"
 
 server:
   port: 8081
